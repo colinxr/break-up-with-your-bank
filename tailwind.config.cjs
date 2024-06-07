@@ -5,6 +5,10 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,json,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      boxShadow: {
+        'light': '0 4px 30px rgba(0, 0, 0, 0.1)', // Custom light shadow
+        'dark': '0 8px 34px rgba(0, 0, 0, 0.4)' 
+      },
       colors: {
         primary: 'var(--aw-color-primary)',
         secondary: 'var(--aw-color-secondary)',
