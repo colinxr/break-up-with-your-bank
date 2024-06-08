@@ -42,6 +42,7 @@ export interface Post {
 
   /**  */
   readingTime?: number;
+  lede?: string;
 }
 
 export interface Taxonomy {
@@ -135,9 +136,11 @@ export interface Stat {
 export interface Item {
   title?: string;
   description?: string;
+  lede?: string;
   icon?: string;
   classes?: Record<string, string>;
   callToAction?: CallToAction;
+  ctaUrl?: string;
   image?: Image;
 }
 
@@ -290,4 +293,4 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
   callToAction?: CallToAction;
 }
 
-export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+export interface Contact extends Omit<Headline, 'classes'>, Form, Widget { }

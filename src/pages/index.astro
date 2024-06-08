@@ -1,19 +1,18 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
-// import Note from '~/components/widgets/Note.astro';
-// import Features from '~/components/widgets/Features.astro';
+import Hero2 from '~/components/widgets/Hero.astro';
+import Button from '~/components/ui/Button.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import BankGrid from '~/components/widgets/BankGrid.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Pledge from '~/components/widgets/Contact.astro';
+import BankList from '~/components/widgets/BankList.astro';
 // import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import { bankList } from '~/bank-list.js';
+import { banks } from '~/bank-list.js';
 
 const metadata = {
   title: 'Break Up With Your Bank',
@@ -24,43 +23,63 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="Break Up With Your Bank"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Learn More',
-        href: '#pledge',
-      },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  <Hero2
+    tagline="Mobile App Web Demo"
+    image={{
+      src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'AstroWind Hero Image',
+    }}
   >
     <Fragment slot="title">
-      Is your bank is funding genocide?
-      <!-- Free template for <span class="hidden xl:inline">creating websites with</span> -->
-      <!-- <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS -->
+      <span class="text-accent dark:text-white highlight">Break Up With</span>
+      <br /> Your Bank
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">All Canadian big banks</span> invest heavily in weapons, military surveillance, and fossil
-        fuel industries -- fueling war, occupation, and climate disasters around the world.</span
-      >
-      <br />
-      <br />
-      <span class="hidden sm:inline">All with YOUR money. But you can do something about it</span>
+      Break free from the chains of traditional banking and take control of your finances.
     </Fragment>
 
-    <Fragment slot="content"> </Fragment>
-  </Hero>
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="primary" href="#plege"> Take Action Now </Button>
+    </div>
+  </Hero2>
 
-  <!-- Note Widget ******************* -->
+  <Features3
+    id="features"
+    title="Your Bank Could Be Funding Genocide"
+    subtitle="Provides a clear and concise explanation of the issues with traditional banks, such as high fees, lack of transparency, and unethical practices."
+    tagline="Take the 90 day challenge"
+    columns={2}
+    items={[
+      {
+        title: 'Fund Wars',
+        description: 'Learn about the unethical actions of traditional banks.',
+        icon: 'tabler:square-number-1',
+      },
+      {
+        title: 'Lack of Transparency',
+        description: 'Learn about the unethical',
+        icon: 'tabler:square-number-2',
+      },
+      {
+        title: 'Unethical Practises',
+        description: 'Learn about the unethical practices of the major banks',
+        icon: 'tabler:square-number-3',
+      },
+      {
+        title: 'Genocide',
+        description: 'Learn about the undethical practies',
+        icon: 'tabler:square-number-4',
+      },
+      {
+        title: 'Shitty',
+        description: 'Learn abotu the unethical practises',
+        icon: 'tabler:square-number-5',
+      },
+    ]}
+  />
 
-  <!-- <Note />  -->
-
-  <!-- Features Widget *************** -->
-
-  <BankGrid id="features" title="Read More About Each Bank's Complicity" items={bankList} />
+  <BankList title="Learn Just how Shitty They Are" banks={banks} />
 
   <Steps
     isDark
