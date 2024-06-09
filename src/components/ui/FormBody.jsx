@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const FormBody = ({ inputs, disclaimer }) => {
   const [showOtherResponseInput, setShowOtherResponseInput] = useState(false);
 
   const handleChange = (e) => {
-    console.log('test');
     setShowOtherResponseInput(e.target.value === 'other');
   };
 
   return (
     <>
-    {inputs?.map(({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '', options = null }) => (
+      {inputs?.map(({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '', options = null }) => (
         name && (
           <div className="mb-6" key={name}>
             {label && (
@@ -18,7 +17,7 @@ const FormBody = ({ inputs, disclaimer }) => {
                 {label}
               </label>
             )}
-            {type!== 'select'? (
+            {type !== 'select' ? (
               <input
                 type={type}
                 name={name}
@@ -28,9 +27,9 @@ const FormBody = ({ inputs, disclaimer }) => {
                 className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
               />
             ) : (
-              <select 
-                name={name} 
-                id={name} 
+              <select
+                name={name}
+                id={name}
                 className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
                 onChange={handleChange}>
                 <option value="" disabled selected>Select an option</option>
@@ -43,38 +42,38 @@ const FormBody = ({ inputs, disclaimer }) => {
         )
       ))}
 
-    {showOtherResponseInput && (
-      <>
-      <label htmlFor="bank-other" className="block text-sm font-medium">
-        Enter name of your bank
-      </label>
-      <input
-        type="text"
-        name="bank-other"
-        id="bank-other"
-        placeholder="Please enter the name of your bank"
-        className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-      />
-      </>
-    )}
-
-    {disclaimer && (
-      <div className="mt-3 flex items-start">
-        <div className="flex mt-0.5">
-          <input
-            id="disclaimer"
-            name="disclaimer"
-            type="checkbox"
-            className="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-          />
-        </div>
-        <div className="ml-3">
-          <label htmlFor="disclaimer" className="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
-            {disclaimer.label}
+      {showOtherResponseInput && (
+        <>
+          <label htmlFor="bank-other" className="block text-sm font-medium">
+            Enter name of your bank
           </label>
+          <input
+            type="text"
+            name="bank-other"
+            id="bank-other"
+            placeholder="Please enter the name of your bank"
+            className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+          />
+        </>
+      )}
+
+      {disclaimer && (
+        <div className="mt-3 flex items-start">
+          <div className="flex mt-0.5">
+            <input
+              id="disclaimer"
+              name="disclaimer"
+              type="checkbox"
+              className="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            />
+          </div>
+          <div className="ml-3">
+            <label htmlFor="disclaimer" className="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
+              {disclaimer.label}
+            </label>
+          </div>
         </div>
-      </div>
-    )}
+      )}
     </>
   )
 }
