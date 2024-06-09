@@ -6,12 +6,9 @@ import Button from '~/components/ui/Button.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Pledge from '~/components/widgets/Contact.astro';
 import BankList from '~/components/widgets/BankList.astro';
-// import Stats from '~/components/widgets/Stats.astro';
 import { banks } from '~/bank-list.js';
 
 const metadata = {
@@ -47,9 +44,10 @@ const metadata = {
   <Features3
     id="features"
     title="Your Bank Could Be Funding Genocide"
+    classes={{ title: 'text-left' }}
     subtitle="Provides a clear and concise explanation of the issues with traditional banks, such as high fees, lack of transparency, and unethical practices."
     tagline="Take the 90 day challenge"
-    columns={2}
+    columns={3}
     items={[
       {
         title: 'Fund Wars',
@@ -79,12 +77,13 @@ const metadata = {
     ]}
   />
 
-  <BankList title="Learn Just how Shitty They Are" banks={banks} />
+  <BankList title="Learn Just how Shitty They Are" banks={banks} classes={{ title: 'text-left' }} />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
     title="Benefits of Credit Unions"
+    classes={{ title: 'text-left' }}
     subtitle="Highlights the advantages of credit unions, including lower fees, community focus, and member ownership."
     tagline=""
     items={[
@@ -112,117 +111,41 @@ const metadata = {
   </Features2>
 
   <Steps
-    isDark
-    title="Process for switching"
+    title="Take the Challenege - Make the Switch"
+    classes={{ title: 'text-left wtf md:text-center' }}
+    subtitle="Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make the switch and start enjoying the benefits of a credit union."
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Step 1: <span class="font-medium">Find a Credit Union</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          'Research and find a credit union that suits your needs. Look for credit unions that offer competitive interest rates, low fees, and convenient branch locations.',
+        icon: 'tabler:building-bank',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Step 2: <span class="font-medium">Open an Account</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          'Once you have chosen a credit union, visit their website or branch to open an account. Fill out the necessary forms and provide any required documentation, such as identification.',
+        icon: 'tabler:credit-card',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Step 3: <span class="font-medium">Transfer Funds</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'To transfer your funds from your bank account to your new credit union account, you can use online banking or visit your bank in person.',
+        icon: 'tabler:currency-dollar',
       },
       {
-        title: 'Ready!',
+        title: 'Step 4: <span class="font-medium">Break Up With Your Bank</span>',
+        description:
+          'Once you have successfully transferred all your funds and updated your payment details, visit your bank in person or follow their online instructions to close your account.',
         icon: 'tabler:check',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
   />
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'Built on top of Astro 4.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Process for switching banks</h2>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <!-- CallToAction Widget *********** -->
 
   <Pledge
     id="pledge"
     title="You have the power to do something"
+    classes={{ container: 'text-left wtf md:text-center m-auto', title: 'my-auto' }}
     subtitle="This is a long journey and we are here to help. Sign up as a commitment to make the switch, and we will help you along the way with a few emails providing more information."
     inputs={[
       {
@@ -274,46 +197,38 @@ const metadata = {
       label:
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
-    description="Our support team typically responds within 24 business hours."
   />
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: 'Why should I switch from a bank to a credit union?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          'There are several reasons why switching from a bank to a credit union can be beneficial. Credit unions are member-owned, not-for-profit financial institutions that prioritize the needs of their members. They often offer lower fees, higher interest rates on savings accounts, and lower interest rates on loans. Additionally, credit unions are known for their personalized service and community-focused approach.',
       },
       {
-        title: 'What do I need to start?',
+        title: 'How do I switch from a bank to a credit union?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'Switching from a bank to a credit union is a relatively simple process. First, research and find a credit union that suits your needs. Then, open an account with the credit union and transfer your funds from your bank account to your new credit union account. You may also need to update any automatic payments or direct deposits to your new account. Finally, close your bank account once all your transactions have been successfully transferred.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'Will I still have access to ATMs if I switch to a credit union?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "Yes, most credit unions are part of a network that allows their members to access a large number of ATMs nationwide. Additionally, many credit unions reimburse a certain amount of ATM fees incurred by their members each month. It's always a good idea to check with the credit union you are considering to see what ATM options and fee reimbursements they offer.",
       },
       {
-        title: "What's something that you don't understand?",
+        title: 'Are credit unions insured?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          'Yes, most credit unions are insured by the National Credit Union Administration (NCUA), which is a federal agency. The NCUA provides insurance coverage of up to $250,000 per depositor, similar to the Federal Deposit Insurance Corporation (FDIC) coverage provided to banks. This means that your deposits in a credit union are protected and safe.',
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'What if I have a loan or a mortage with my bank?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          'If you have a loan or mortgage with your bank and you decide to switch to a credit union, you will need to transfer that loan or mortgage to the credit union. Credit unions often offer competitive rates on loans and mortgages, so it may be beneficial to explore this option. Contact your credit union of choice to discuss the process of transferring your loan or mortgage.',
       },
     ]}
   />

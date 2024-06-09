@@ -166,7 +166,7 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
+    { text: 'Land Acknowledgement', href: getPermalink('/land-acknowledgement') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
