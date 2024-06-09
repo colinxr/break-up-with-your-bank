@@ -1,22 +1,21 @@
 site:
   name: 'Break Up With Your Bank'
-  site: 'https://astrowind.vercel.app'
+  site: 'https://break-up-with-your-bank.pages.dev'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
-
+  googleSiteVerificationId: 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Break Up With Your Bank
+    template: '%s — Break Up With Your Bank'
+  description: "Your money could be funding genocide."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Break Up With Your Bank
     images:
       - url: '~/assets/images/default.png'
         width: 1200
