@@ -1,0 +1,18 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+
+const {
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+  image1 = await Astro.slots.render('image'),
+  image2 = await Astro.slots.render('image'),
+} = Astro.props;
+---
+
+<div class='flex justify-center items-center flex-col md:flex-row mt-5 px-5'>
+  <Image class='w-full h-auto' loading='eager' {...image1} />
+  <Image class='w-full h-auto' loading='eager' {...image2} />
+</div>

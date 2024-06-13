@@ -1,0 +1,43 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
+
+const {
+  title = await Astro.slots.render('title'),
+  description = await Astro.slots.render('description'),
+  actions = await Astro.slots.render('actions'),
+  image = await Astro.slots.render('image'),
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<div id={id} class='grid grid-cols-1 lg:grid-cols-6'>
+  <!-- left side -->
+  {/* Left Side */}
+  <div
+    class='lg:col-span-3 flex flex-col justify-center items-center md:items-start bg-black py-16 md:py-5 px-4 md:px-8'
+  >
+    <Fragment slot='title'>
+      <h2 class='text-5xl font-black text-[#F3F3F3] mb-4 leading-normal text-center md:text-left'>{title}</h2>
+    </Fragment>
+    <Fragment slot='subtitle'>
+      <p class='text-white opacity-50 mb-12 text-center md:text-left'>{description}</p>
+    </Fragment>
+    <div slot='actions' class='flex max-w-sm gap-4 mt-4 md:mt-12'>
+      <Button
+        variant='primary'
+        class='bg-[#FDB52B] hover:bg-[#FDB52B] text-black hover:text-black border-0 rounded'
+        href='#plege'
+      >
+        {actions}
+      </Button>
+    </div>
+  </div>
+  <div class='lg:col-span-3 flex'>
+    <Image class='w-full h-full object-cover max-w-none' style='max-width: unset;' loading='eager' {...image} />
+  </div>
+</div>
