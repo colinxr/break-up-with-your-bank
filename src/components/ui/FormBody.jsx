@@ -11,9 +11,9 @@ const FormBody = ({ inputs, disclaimer }) => {
     <>
       {inputs?.map(({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '', options = null }) => (
         name && (
-          <div className="mb-6" key={name}>
+          <div className={name === 'bank' || name === 'other' ? 'w-full' : 'flex-grow'} key={name}>
             {label && (
-              <label htmlFor={name} className="block text-sm font-medium">
+              <label htmlFor={name} className="block text-sm font-medium mb-1">
                 {label}
               </label>
             )}
@@ -43,8 +43,8 @@ const FormBody = ({ inputs, disclaimer }) => {
       ))}
 
       {showOtherResponseInput && (
-        <>
-          <label htmlFor="bank-other" className="block text-sm font-medium">
+        <div class="w-full">
+          <label htmlFor="bank-other" className="block text-sm font-medium mb-1">
             Enter name of your bank
           </label>
           <input
@@ -54,7 +54,7 @@ const FormBody = ({ inputs, disclaimer }) => {
             placeholder="Please enter the name of your bank"
             className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
           />
-        </>
+        </div>
       )}
 
       {disclaimer && (

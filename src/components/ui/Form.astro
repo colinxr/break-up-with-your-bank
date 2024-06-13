@@ -7,7 +7,9 @@ const { inputs, disclaimer, button = 'Contact us', description = '' } = Astro.pr
 ---
 
 <form>
-  <FormBody inputs={inputs} disclaimer={disclaimer} client:visible />
+  <div class="flex flex-wrap gap-6">
+    <FormBody inputs={inputs} disclaimer={disclaimer} client:visible />
+  </div>
 
   {
     button && (
