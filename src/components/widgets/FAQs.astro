@@ -3,13 +3,14 @@ import Headline from '~/components/ui/Headline.astro';
 import ItemGrid from '~/components/ui/ItemGrid.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import type { Faqs as Props } from '~/types';
+import { Icon } from 'astro-icon/components';
 
 const {
   title = '',
   subtitle = '',
   tagline = '',
   items = [],
-  columns = 2,
+  columns = 1,
 
   id,
   isDark = false,
@@ -20,14 +21,56 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
-  <ItemGrid
+  <!-- <ItemGrid
     items={items}
     columns={columns}
-    defaultIcon="tabler:chevron-right"
+    defaultIcon='tabler:chevron-right'
     classes={{
-      container: `${columns === 1 ? 'max-w-4xl' : ''} gap-y-8 md:gap-y-12`,
+      container: `gap-y-8 md:gap-y-12`,
       panel: 'max-w-none',
       icon: 'flex-shrink-0 mt-1 w-6 h-6 text-primary',
     }}
-  />
+  /> -->
+  {
+    items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }, i) => (
+      <details open={i === 0} class={`group transition duration-50 mb-2 rounded-[20px] border-2 border-[#F8F8F8]`}>
+        <summary class='flex cursor-pointer items-center justify-between gap-2  transition text-black   bg-[#F8F8F8] p-5 rounded-[20px]  group-open:rounded-bl-[0px] group-open:rounded-br-[0px] '>
+          <h4 class='text-2xl font-black '>{title}</h4>
+          {/* icons */}
+          <div class='flex items-center justify-center  w-11 h-11 rounded-full bg-black'>
+            <svg
+              class='block group-open:hidden'
+              width='17'
+              height='17'
+              viewBox='0 0 17 17'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M6.11097 16.0199V0.252841H10.8837V16.0199H6.11097ZM0.613814 10.5227V5.75H16.3809V10.5227H0.613814Z'
+                fill='white'
+              />
+            </svg>
+
+            <svg
+              class='hidden group-open:block'
+              width='17'
+              height='24'
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 448 512'
+            >
+              {' '}
+              <path
+                fill='white'
+                d='M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z'
+              />
+            </svg>
+          </div>
+        </summary>
+        <div class='p-5 font-normal	text-lg'>
+          <Fragment slot='subtitle'>{description}</Fragment>
+        </div>
+      </details>
+    ))
+  }
 </WidgetWrapper>
