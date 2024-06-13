@@ -112,7 +112,7 @@ const metadata = {
 
   <Steps
     title="Take the Challenege - Make the Switch"
-    classes={{ title: 'text-left md:text-center' }}
+    classes={{ title: 'text-left md:text-center lg:pb-24' }}
     subtitle="Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make the switch and start enjoying the benefits of a credit union."
     items={[
       {
@@ -140,12 +140,16 @@ const metadata = {
         icon: 'tabler:check',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 pb-24 bg-slate-500 dark:bg-transparent"></div>
+    </Fragment>
+  </Steps>
 
   <Pledge
     id="pledge"
     title="You have the power to do something"
-    classes={{ container: 'text-left wtf md:text-center m-auto', title: 'my-auto' }}
+    classes={{ container: 'text-left md:text-center m-auto lg:-mt-24 md:pt-10 lg:pt-10 bg-white', title: 'my-auto' }}
     subtitle="This is a long journey and we are here to help. Sign up as a commitment to make the switch, and we will help you along the way with a few emails providing more information."
     button="Start Now"
     inputs={[
