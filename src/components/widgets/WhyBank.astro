@@ -1,0 +1,45 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import ItemGrid2 from '~/components/ui/ItemGrid2.astro';
+
+const {
+  title = await Astro.slots.render('title'),
+  description = await Astro.slots.render('description'),
+  items = [],
+  image = await Astro.slots.render('image'),
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<div class='py-8 px-4 md:px-8 bg-[#293853]'>
+  <div id={id} class='grid grid-cols-1 lg:grid-cols-6'>
+    <div class='lg:col-span-3 flex pr-0 lg:pr-16'>
+      <Image class='w-100 h-100 object-cover mt-10 rounded' loading='eager' {...image} />
+    </div>
+    <div class='lg:col-span-3 flex flex-col justify-center items-center md:items-start mt-10 lg:mt-0'>
+      <Fragment slot='title'>
+        <h2 class='text-5xl font-black text-white mb-4 leading-normal text-center md:text-left'>{title}</h2>
+      </Fragment>
+      <Fragment slot='subtitle'>
+        <p class='text-white opacity-50 mb-12 text-center md:text-left'>{description}</p>
+      </Fragment>
+      <ItemGrid2
+        items={items}
+        columns={2}
+        classes={{
+          container: 'gap-4 md:gap-6',
+          panel:
+            'rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] bg-white dark:bg-slate-900 p-6',
+          // panel:
+          //   "text-center bg-page items-center md:text-left rtl:md:text-right md:items-start p-6 p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-800",
+          icon: 'w-12 h-12 mb-6 text-primary',
+          ...((classes?.items as Record<string, never>) ?? {}),
+        }}
+      />
+    </div>
+  </div>
+</div>
