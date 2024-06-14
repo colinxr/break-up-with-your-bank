@@ -20,16 +20,16 @@ export const banks =
       "content": "TD is the second largest bank in Canada with TD Group making up their multinational corporate arm. TD also has a diverse portfolio of loans and shares with serious environmental and humanitarian implications.\nTD has a 340 million USD investment in Mountain Valley Pipeline in 2022, and a 315 million CAD loan to Coastal GasLink Pipeline in 2020.\nIt underwrote more than a quarter of the bonds for prison and immigration detention company, GEO Group, totalling 1.15 billion USD in 2018.\nTD supports nuclear weapons producers with 94.6 million USD in shareholdings, 453.3 million USD in underwritten bonds, and 1833.3 USD million as well as investing in companies arming Israel such as BAE Systems PLS, L3 Harris Tech., and Lockheed Martin Corp.",
       "ctaUrl": "#"
     },
-    {
-      "title": "RBC",
-      "excerpt": "$57 million to Palantir, who supplies spy-tech to the Israeli Defense Forces",
-      "content": "RBC is the largest financial institution in Canada.\n\nRBC provided 315 million CAD in loans to the Coastal GasLink Pipeline in 2020, and a 27 million USD loan for the Mountain Valley Pipeline in 2022. In addition to loans, RBC is a shareholder in numerous palm oil and paper mill companies internationally.\n3567.9 million USD in underwritten bonds, 5052.2 million USD in loans, and 475.3 million USD in shareholdings of nuclear weapons. This includes companies providing weapons to Israel like Lockheed Martin Corp., and BAE Systems PLC.\n\nAs of 2018, RBC was a shareholder in Bank Hapoalim and Bank Mizrahi Tefahot, both active in illegal settlement projects in occupied Palestine.",
-      "ctaUrl": "#"
-    },
-    {
-      "title": "CIBC",
-      "excerpt": "Find a catchy number for heading",
-      "content": "Offers financial services in Canada and the U.S.\n\nCIBC is heavily invested in pipelines for natural gas and crude oil in projects across North America and has previously invested in the Tar Sands. In 2022, it provided a 27 million USD bond for the Mountain Valley Pipeline project. In addition, in 2022, it held 5.9 million USD in equity shares in Bunge, a major palm O=oil producer (and destroyer of forest).\n\nIt invests in nuclear weapons producers Bechtel to the tune of $225 million, and invested 46.7 million in Honeywell International (in addition to household products Honeywell is also a weapons manufacturer).\n\nCIBC also actively promotes easy investments in Israeli companies that are situated and operate on stolen land.\n\nDon’t forget, Simplii Financial is a division of CIBC.",
-      "ctaUrl": "#",
-    }
+    // {
+    //   "title": "RBC",
+    //   "excerpt": "$57 million to Palantir, who supplies spy-tech to the Israeli Defense Forces",
+    //   "content": "RBC is the largest financial institution in Canada.\n\nRBC provided 315 million CAD in loans to the Coastal GasLink Pipeline in 2020, and a 27 million USD loan for the Mountain Valley Pipeline in 2022. In addition to loans, RBC is a shareholder in numerous palm oil and paper mill companies internationally.\n3567.9 million USD in underwritten bonds, 5052.2 million USD in loans, and 475.3 million USD in shareholdings of nuclear weapons. This includes companies providing weapons to Israel like Lockheed Martin Corp., and BAE Systems PLC.\n\nAs of 2018, RBC was a shareholder in Bank Hapoalim and Bank Mizrahi Tefahot, both active in illegal settlement projects in occupied Palestine.",
+    //   "ctaUrl": "#"
+    // },
+    // {
+    //   "title": "CIBC",
+    //   "excerpt": "Find a catchy number for heading",
+    //   "content": "Offers financial services in Canada and the U.S.\n\nCIBC is heavily invested in pipelines for natural gas and crude oil in projects across North America and has previously invested in the Tar Sands. In 2022, it provided a 27 million USD bond for the Mountain Valley Pipeline project. In addition, in 2022, it held 5.9 million USD in equity shares in Bunge, a major palm O=oil producer (and destroyer of forest).\n\nIt invests in nuclear weapons producers Bechtel to the tune of $225 million, and invested 46.7 million in Honeywell International (in addition to household products Honeywell is also a weapons manufacturer).\n\nCIBC also actively promotes easy investments in Israeli companies that are situated and operate on stolen land.\n\nDon’t forget, Simplii Financial is a division of CIBC.",
+    //   "ctaUrl": "#",
+    // }
   ]
