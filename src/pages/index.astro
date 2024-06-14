@@ -1,10 +1,13 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero2 from '~/components/widgets/Hero.astro';
-import Button from '~/components/ui/Button.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+import TopHeader from '~/components/widgets/TopHeader.astro';
+import LandingHero from '~/components/widgets/LandingHero.astro';
+import WhyBank from '~/components/widgets/WhyBank.astro';
+// import Hero2 from '~/components/widgets/Hero.astro';
+// import Button from '~/components/ui/Button.astro';
+// import Features3 from '~/components/widgets/Features3.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Pledge from '~/components/widgets/Contact.astro';
@@ -20,7 +23,56 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero2
+  <TopHeader
+    image1={{
+      src: '~/assets/images/breakup-with-bank.png',
+      alt: 'Breakup With Banks',
+    }}
+    image2={{
+      src: '~/assets/images/hands.png',
+      alt: 'Raise Hand',
+    }}
+  />
+  <LandingHero
+    title='Your Bank is Funding War'
+    description='It’s time to take action - Break Up with Your Bank!'
+    actions='Take Action Now'
+    image={{
+      src: '~/assets/images/hero.png',
+      alt: 'Breakup With Banks',
+    }}
+  />
+  <WhyBank
+    title='Why Banks are Bad'
+    description='Scotiabank, BMO, Manulife, and RBC all  financially support the illegal Israeli settlements in Occupied Palestinian Territory via shares in Israeli banks.'
+    items={[
+      {
+        title: 'Fund Wars',
+        description:
+          'From billion dollar investment in nuclear weapon, to funding companies like Elbit Systems currently supplying the bombs that kill children in Gaza. ',
+      },
+      {
+        title: 'Climate Disaster',
+        description:
+          'Canadian banks are 5 of the 6 largest global financiers of tar sands . RBC alone is the largest financier of fossil fuels worldwide. They are at war with the planet. ',
+      },
+      {
+        title: 'Finance Occupation',
+        description:
+          'Canadian banks invest in over 112 companies listed as complicit in Israel’s occupation by the UN. ',
+      },
+      {
+        title: 'Attack Indigenous Communities',
+        description:
+          'Learn about the unethical actions of traditional banks and make a switch to an ethical alternative.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/banks.png',
+      alt: 'Breakup With Banks',
+    }}
+  />
+  <!-- <Hero2
     tagline="Mobile App Web Demo"
     image={{
       src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
@@ -75,13 +127,17 @@ const metadata = {
         icon: 'tabler:square-number-5',
       },
     ]}
+  /> -->
+  <BankList
+    title='Learn Just how Shitty They Are'
+    information='Welcome to our resource center, where you can find a collection of articles, videos, and guides that will help you understand why banks are bad and how credit unions can provide a better alternative. We believe that everyone should have access to fair and ethical financial services, and we are here to help you make an informed decision.'
+    banks={banks}
+    classes={{ title: 'text-left' }}
   />
-
-  <BankList title="Learn Just how Shitty They Are" banks={banks} classes={{ title: 'text-left' }} />
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
+  <!-- <Features2
     title="Benefits of Credit Unions"
     isDark
     classes={{ container: 'lg:pb-24', title: 'text-left text-white', content: 'lg:mb-12' }}
@@ -109,7 +165,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-black font-white dark:bg-transparent"></div>
     </Fragment>
-  </Features2>
+  </Features2> -->
 
   <Steps
     title="Take the Challenege - Make the Switch"
@@ -204,7 +260,7 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
+    title="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
