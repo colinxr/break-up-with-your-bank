@@ -26,7 +26,7 @@ const {
 {
   (
     <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
-      <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
+      <div class="flex flex-col lg:justify-between  mb-8">
         {title && (
           <div class="md:max-w-sm">
             <h2
@@ -36,7 +36,9 @@ const {
           </div>
         )}
 
-        {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
+        {information && (
+          <p class='block text-muted dark:text-slate-400 lg:text-sm lg:max-w-2xl' set:html={information} />
+        )}      
       </div>
       {banks && <Grid posts={banks || []} />}
     </WidgetWrapper>
