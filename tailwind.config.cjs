@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       boxShadow: {
         'light': '0 4px 30px rgba(0, 0, 0, 0.1)', // Custom light shadow
-        'dark': '0 8px 34px rgba(0, 0, 0, 0.4)' 
+        'dark': '0 8px 34px rgba(0, 0, 0, 0.4)'
       },
       colors: {
         primary: 'var(--aw-color-primary)',
@@ -15,6 +15,8 @@ module.exports = {
         accent: 'var(--aw-color-accent)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
+        red: '#FFF3F0',
+        grey: '#F8F8F8'
       },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],

@@ -1,9 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import TopHeader from '~/components/widgets/TopHeader.astro';
 import LandingHero from '~/components/widgets/LandingHero.astro';
-import WhyBank from '~/components/widgets/WhyBank.astro';
+import Content from '~/components/widgets/Content.astro';
 // import Hero2 from '~/components/widgets/Hero.astro';
 // import Button from '~/components/ui/Button.astro';
 // import Features3 from '~/components/widgets/Features3.astro';
@@ -11,8 +10,6 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Pledge from '~/components/widgets/Contact.astro';
-import BankList from '~/components/widgets/BankList.astro';
-import { banks } from '~/bank-list.js';
 
 const metadata = {
   title: 'Break Up With Your Bank',
@@ -21,30 +18,61 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
-  <TopHeader
-    image1={{
-      src: '~/assets/images/breakup-with-bank.png',
-      alt: 'Breakup With Banks',
-    }}
-    image2={{
-      src: '~/assets/images/hands.png',
-      alt: 'Raise Hand',
-    }}
-  />
   <LandingHero
-    title='Your Bank is Funding War'
-    description='It’s time to take action - Break Up with Your Bank!'
-    actions='Take Action Now'
+    title="Break Up With Your Bank"
+    description="Your bank is funding war."
+    actions="Take Action Now"
     image={{
       src: '~/assets/images/hero.png',
       alt: 'Breakup With Banks',
     }}
   />
-  <WhyBank
-    title='Why Banks are Bad'
-    description='Scotiabank, BMO, Manulife, and RBC all  financially support the illegal Israeli settlements in Occupied Palestinian Territory via shares in Israeli banks.'
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Why your bank is bad"
+    subtitle="Scotiabank, BMO, Manulife, and RBC all  financially support the illegal Israeli settlements in Occupied Palestinian Territory via shares in Israeli banks."
+    items={[
+      {
+        title: 'Built on top of Astro 4.0',
+        description:
+          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+        callToAction: { href: '#', text: 'Learn More' },
+      },
+      {
+        title: 'Styled using Tailwind CSS',
+        description:
+          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+        callToAction: { href: '#', text: 'Learn More' },
+      },
+      {
+        title: 'Cross-browser compatibility',
+        description:
+          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+        callToAction: { href: '#', text: 'Learn More' },
+      },
+      {
+        title: 'Cross-browser compatibility',
+        description:
+          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+        callToAction: { href: '#', text: 'Learn More' },
+      },
+    ]}
+    image={{
+      src: '~/assets/images/break-up-with-your-bank-gaza.svg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-red dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- <WhyBank
+    title="Why Banks are Bad"
+    description="Scotiabank, BMO, Manulife, and RBC all  financially support the illegal Israeli settlements in Occupied Palestinian Territory via shares in Israeli banks."
     items={[
       {
         title: 'Fund Wars',
@@ -127,10 +155,10 @@ const metadata = {
         icon: 'tabler:square-number-5',
       },
     ]}
-  /> -->
+  />
   <BankList
-    title='Learn Just how Shitty They Are'
-    information='Welcome to our resource center, where you can find a collection of articles, videos, and guides that will help you understand why banks are bad and how credit unions can provide a better alternative. We believe that everyone should have access to fair and ethical financial services, and we are here to help you make an informed decision.'
+    title="Learn Just how Shitty They Are"
+    information="Welcome to our resource center, where you can find a collection of articles, videos, and guides that will help you understand why banks are bad and how credit unions can provide a better alternative. We believe that everyone should have access to fair and ethical financial services, and we are here to help you make an informed decision."
     banks={banks}
     classes={{ title: 'text-left' }}
   />
@@ -139,72 +167,37 @@ const metadata = {
 
   <Features2
     title="Benefits of Credit Unions"
-    isDark
-    classes={{ container: 'lg:pb-24', title: 'text-left text-white', content: 'lg:mb-12' }}
-    subtitle="Highlights the advantages of credit unions, including lower fees, community focus, and member ownership."
+    classes={{ title: 'text-left text-white' }}
+    subtitle="Credit unions and caisse populaires (Quebec) are member-owned, cooperative financial institutions."
     tagline=""
     items={[
       {
         title: 'Lower Fees',
         description: 'Save money with lower fees compared to traditional banks.',
-        icon: 'flat-color-icons:template',
       },
       {
         title: 'Community Focus',
         description:
           'Some credit unions return profits to members as dividends, reduced fees, higher savings rates, or lower loan rates. Profits are also frequently donated or invested into local community initiatives.',
-        icon: 'flat-color-icons:gallery',
       },
       {
         title: 'Member Ownership',
         description: `At credit unions, you’re a member/shareholder, not just a customer. This means you get a say in how the institution is run, including an equal vote (regardless of your account or investment sizes) to elect the board of directors.`,
-        icon: 'flat-color-icons:approval',
       },
     ]}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-black font-white dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-grey font-white dark:bg-transparent"></div>
     </Fragment>
   </Features2>
 
-  <Steps
-    title="Take the Challenege - Make the Switch"
-    classes={{ container: 'lg:-mt-24 md:pt-10 lg:pt-10 lg:px-10 bg-white', title: 'text-left md:text-center' }}
-    subtitle="Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make the switch and start enjoying the benefits of a credit union."
-    items={[
-      {
-        title: 'Step 1: Find a Credit Union',
-        description:
-          'Research and find a credit union that suits your needs. Look for credit unions that offer competitive interest rates, low fees, and convenient branch locations.',
-        icon: 'tabler:building-bank',
-      },
-      {
-        title: 'Step 2: Open an Account',
-        description:
-          'Once you have chosen a credit union, visit their website or branch to open an account. Fill out the necessary forms and provide any required documentation, such as identification.',
-        icon: 'tabler:credit-card',
-      },
-      {
-        title: 'Step 3: Transfer Funds',
-        description:
-          'To transfer your funds from your bank account to your new credit union account, you can use online banking or visit your bank in person.',
-        icon: 'tabler:currency-dollar',
-      },
-      {
-        title: 'Step 4: Break Up With Your Bank',
-        description:
-          'Once you have successfully transferred all your funds and updated your payment details, visit your bank in person or follow their online instructions to close your account.',
-        icon: 'tabler:check',
-      },
-    ]}
-  />
-
   <Pledge
     id="pledge"
-    title="You have the power to do something"
-    classes={{ container: 'text-left md:text-center m-auto  bg-white', title: 'my-auto' }}
+    isDark
+    title="Take the Challenge"
+    classes={{ container: 'text-left md:text-center m-auto  ', title: 'my-auto' }}
     subtitle="This is a long journey and we are here to help. Sign up as a commitment to make the switch, and we will help you along the way with a few emails providing more information."
-    button="Start Now"
+    button="Make the Switch"
     inputs={[
       {
         type: 'text',
@@ -255,8 +248,39 @@ const metadata = {
       label:
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-black font-white dark:bg-transparent"></div>
+    </Fragment>
+  </Pledge>
 
+  <Steps
+    title="What happens next?"
+    classes={{ container: 'md:pt-10 lg:pt-10 lg:px-10 bg-white', title: 'text-left md:text-center' }}
+    subtitle="Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make the switch and start enjoying the benefits of a credit union."
+    items={[
+      {
+        title: 'Step 1: Find a Credit Union',
+        description:
+          'Research and find a credit union that suits your needs. Look for credit unions that offer competitive interest rates, low fees, and convenient branch locations.',
+      },
+      {
+        title: 'Step 2: Open an Account',
+        description:
+          'Once you have chosen a credit union, visit their website or branch to open an account. Fill out the necessary forms and provide any required documentation, such as identification.',
+      },
+      {
+        title: 'Step 3: Transfer Funds',
+        description:
+          'To transfer your funds from your bank account to your new credit union account, you can use online banking or visit your bank in person.',
+      },
+      {
+        title: 'Step 4: Move Auto Payments',
+        description:
+          'Once you have successfully transferred all your funds and updated your payment details, visit your bank in person or follow their online instructions to close your account.',
+      },
+    ]}
+  />
   <!-- FAQs Widget ******************* -->
 
   <FAQs

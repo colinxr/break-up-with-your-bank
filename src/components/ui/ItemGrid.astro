@@ -36,7 +36,7 @@ const {
         <div>
           <div class={twMerge('flex flex-row max-w-md', panelClass, itemClasses?.panel)}>
             <div class="flex justify-center">
-              {(icon || defaultIcon) && (
+              {icon && (
                 <Icon
                   name={icon || defaultIcon}
                   class={twMerge('w-7 h-7 mr-2 rtl:mr-0 rtl:ml-2', defaultIconClass, itemClasses?.icon)}
@@ -52,7 +52,13 @@ const {
                 />
               )}
               {callToAction && (
-                <div class={twMerge(`${title || description ? 'mt-3' : ''}`, actionClass, itemClasses?.actionClass)}>
+                <div
+                  class={twMerge(
+                    `underline ${title || description ? 'mt-3' : ''}`,
+                    actionClass,
+                    itemClasses?.actionClass
+                  )}
+                >
                   <Button variant="link" {...callToAction} />
                 </div>
               )}
