@@ -28,13 +28,13 @@ const {
       { 'md:flex-row': image },
     ]}
   >
-    <div class:list={['md:py-4 md:self-center lg:pb-24', { 'md:basis-1/2': image }, { 'w-full': !image }]}>
+    <div class:list={['md:py-4 md:self-center', { 'md:basis-1/2': image }, { 'w-full': !image }]}>
       <Headline
         title={title}
         subtitle={subtitle}
         tagline={tagline}
         classes={{
-          container: 'text-left rtl:text-right',
+          container: 'text-left max-w-3xl rtl:text-right',
           title: 'text-3xl lg:text-4xl',
           ...((classes?.headline as object) ?? {}),
         }}

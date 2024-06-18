@@ -186,6 +186,9 @@ const metadata = {
       },
     ]}
   >
+    <Fragment slot="action">
+      <a href="#" class="btn mb-6 -mt-8">Learn more about credit unions</a>
+    </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-grey font-white dark:bg-transparent"></div>
     </Fragment>
@@ -256,26 +259,26 @@ const metadata = {
 
   <Steps
     title="What happens next?"
-    classes={{ container: 'md:pt-10 lg:pt-10 lg:px-10 bg-white', title: 'text-left md:text-center' }}
+    classes={{ container: 'md:pt-10 lg:pt-10 lg:px-10 bg-white md:pb-0 lg:pb-0', title: 'text-left md:text-center' }}
     subtitle="Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make the switch and start enjoying the benefits of a credit union."
     items={[
       {
-        title: 'Step 1: Find a Credit Union',
+        title: 'Find a Credit Union',
         description:
           'Research and find a credit union that suits your needs. Look for credit unions that offer competitive interest rates, low fees, and convenient branch locations.',
       },
       {
-        title: 'Step 2: Open an Account',
+        title: 'Open an Account',
         description:
           'Once you have chosen a credit union, visit their website or branch to open an account. Fill out the necessary forms and provide any required documentation, such as identification.',
       },
       {
-        title: 'Step 3: Transfer Funds',
+        title: 'Transfer Funds',
         description:
           'To transfer your funds from your bank account to your new credit union account, you can use online banking or visit your bank in person.',
       },
       {
-        title: 'Step 4: Move Auto Payments',
+        title: 'Move Auto Payments',
         description:
           'Once you have successfully transferred all your funds and updated your payment details, visit your bank in person or follow their online instructions to close your account.',
       },

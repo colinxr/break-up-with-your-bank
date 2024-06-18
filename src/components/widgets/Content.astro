@@ -41,7 +41,7 @@ const {
       subtitle: 'max-w-3xl text-xl text-muted dark:text-slate-400',
     }}
   />
-  <div class="mx-auto max-w-7xl p-4 md:px-8">
+  <div class="mx-auto max-w-7xl p-4 md:p-0">
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
       <div class="md:basis-1/2 self-center">
         {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
@@ -59,9 +59,9 @@ const {
           columns={columns}
           defaultIcon="tabler:check"
           classes={{
-            container: `gap-y-4 md:gap-y-8`,
-            panel: 'max-w-none mb-8',
-            title: 'text-xl font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
+            container: `gap-y-4 md:gap-y-6`,
+            panel: 'max-w-none ',
+            title: 'text-xl font-bold leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
             description: 'text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2',
             icon: 'hidden flex h-7 w-7 items-center justify-center rounded-full bg-green-600 dark:bg-green-700 text-gray-50 p-1',
             action: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
