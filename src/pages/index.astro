@@ -74,7 +74,7 @@ const metadata = {
 
   <Features2
     title="Benefits of Credit Unions"
-    classes={{ title: 'text-left text-white' }}
+    classes={{ title: 'text-left text-white', headline: 'mb-4' }}
     subtitle="Credit unions and caisse populaires (Quebec) are member-owned, cooperative financial institutions."
     tagline=""
     items={[
@@ -96,8 +96,11 @@ const metadata = {
     ]}
   >
     <Fragment slot="action">
-      <a href="#" class="btn mb-6 -mt-8">Learn more about credit unions</a>
+      <div class="mt-8 text-right">
+        <a href="#" class="cursor-pointer hover:text-primary underline mb-6 mt-8">Learn more about credit unions</a>
+      </div>
     </Fragment>
+
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-grey font-white dark:bg-transparent"></div>
     </Fragment>
@@ -107,7 +110,7 @@ const metadata = {
     id="pledge"
     isDark
     title="Take the Challenge"
-    classes={{ container: 'text-left md:text-center m-auto  ', title: 'my-auto' }}
+    classes={{ container: 'text-left md:text-center m-auto  ', title: 'my-auto text-3xl' }}
     subtitle="This is a long journey and we are here to help. Sign up as a commitment to make the switch, and we will help you along the way with a few emails providing more information."
     button="Make the Switch"
     inputs={[
@@ -162,7 +165,7 @@ const metadata = {
     }}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-black font-white dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-[#302F2F] font-white dark:bg-transparent"></div>
     </Fragment>
   </Pledge>
 

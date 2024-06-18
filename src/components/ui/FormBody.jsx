@@ -23,14 +23,14 @@ const FormBody = ({ inputs, disclaimer }) => {
                 name={name}
                 id={name}
                 autoComplete={autocomplete}
-                placeholder={placeholder}
-                className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                placeholder={label}
+                className="py-3 px-4 block w-full text-black text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white"
               />
             ) : (
               <select
                 name={name}
                 id={name}
-                className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                className="py-3 px-4 block text-slate-400 w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white"
                 onChange={handleChange}>
                 <option value="" disabled selected>Select an option</option>
                 {options?.map(option => (
@@ -52,7 +52,7 @@ const FormBody = ({ inputs, disclaimer }) => {
             name="bank-other"
             id="bank-other"
             placeholder="Please enter the name of your bank"
-            className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            className="py-3 px-4 block w-full text-black text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white"
           />
         </div>
       )}
@@ -64,7 +64,7 @@ const FormBody = ({ inputs, disclaimer }) => {
               id="disclaimer"
               name="disclaimer"
               type="checkbox"
-              className="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+              className="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white"
             />
           </div>
           <div className="ml-3">

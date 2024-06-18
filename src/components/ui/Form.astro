@@ -14,7 +14,11 @@ const { inputs, disclaimer, button = 'Contact us', description = '' } = Astro.pr
   {
     button && (
       <div class="mt-10 grid">
-        <Button variant="primary" type="submit">
+        <Button
+          variant="primary"
+          class="bg-green hover:bg-[#FDB52B] text-white hover:text-black border-0 rounded"
+          href="#pledge"
+        >
           {button}
         </Button>
       </div>

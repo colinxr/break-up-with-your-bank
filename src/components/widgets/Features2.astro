@@ -20,7 +20,6 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline as Record<string, string>} />
-  <slot name="action" />
   <ItemGrid2
     items={items}
     columns={columns}
@@ -31,4 +30,5 @@ const {
       ...((classes?.items as Record<string, never>) ?? {}),
     }}
   />
+  <slot name="action" />
 </WidgetWrapper>
