@@ -30,7 +30,7 @@
   }
 
   .btn-primary {
-    @apply btn font-semibold bg-green text-white border-primary hover:bg-darkGreen hover:border-secondary hover:text-white dark:text-white dark:hover:text-white dark:border-primary dark:hover:border-secondary dark:hover:bg-[#DC0000];
+    @apply btn font-semibold bg-green text-white border-primary hover:bg-darkGreen hover:border-secondary hover:text-white dark:hover:bg-darkGreen dark:text-white dark:hover:text-white;
   }
 
   .btn-secondary {
