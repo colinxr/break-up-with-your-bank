@@ -6,6 +6,7 @@ import Content from '~/components/widgets/Content.astro';
 // import Hero2 from '~/components/widgets/Hero.astro';
 // import Button from '~/components/ui/Button.astro';
 // import Features3 from '~/components/widgets/Features3.astro';
+import Accordions from '~/components/widgets/Accordions.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -21,7 +22,8 @@ const metadata = {
   <LandingHero
     title="Break Up With Your Bank"
     description="Your bank is funding war."
-    actions="Take Action Now"
+    body="All [Canadian] big banks invest heavily in weapons, military surveillance, and fossil fuel industries- fueling war, occupation, and climate disasters around the world. All with YOUR money. But you can do something about it."
+    actions="Switch Now"
     image={{
       src: '~/assets/images/hero.png',
       alt: 'Breakup With Banks',
@@ -32,31 +34,30 @@ const metadata = {
 
   <Content
     isReversed
-    title="Why Banks Are Bad"
-    subtitle="Scotiabank, BMO, Manulife, and RBC all  financially support the illegal Israeli settlements in Occupied Palestinian Territory via shares in Israeli banks."
+    title="Why Ditch Your Bank?"
     items={[
       {
-        title: 'Built on top of Astro 4.0',
+        title: 'Investing in War',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'Banks invest billions of dollars in nuclear weaponry, and fund companies like Elbit Systems, which supplies the bombs that are currently being used to kill children in Gaza',
         callToAction: { href: '#', text: 'Learn More' },
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Fuelling Climate Disaster',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'The big 5 Canadian banks are 5 of the 6 largest global financiers of tar sands. RBC alone is the largest financier of fossil fuels worldwide.',
         callToAction: { href: '#', text: 'Learn More' },
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Financing Occupation',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'Canadian banks invest in over 112 companies listed by the UN as being complicit in Israel’s occupation.',
         callToAction: { href: '#', text: 'Learn More' },
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Attacking Indigenous Communities',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'Banks continuously fund projects that violate Indigenous peoples’ rights at places like Standing Rock, Wet’suwet’en Yintah, and along the Transmountain Expansion.',
         callToAction: { href: '#', text: 'Learn More' },
       },
     ]}
@@ -73,25 +74,24 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Benefits of Credit Unions"
+    title="Join a Credit Union!"
     classes={{ title: 'text-left text-white', headline: 'mb-4' }}
-    subtitle="Credit unions and caisse populaires (Quebec) are member-owned, cooperative financial institutions."
-    tagline=""
+    subtitle="Credit unions are member-owned, cooperative financial institutions. This means they’re owned and controlled by the people who use them."
     items={[
       {
-        title: 'More Transparency',
+        title: 'Community Minded',
         description:
-          'Credit union due to their structure have an obligation to include, educate, and be open and transparent with its members. After all, you as a credit union member are the physical owner and investor in the institution',
+          ' Some credit unions return profits to members as dividends, reduced fees, higher savings rates, or lower loan rates. Profits are also frequently donated or invested into local community initiatives.',
       },
       {
-        title: 'Beyond Profits',
+        title: 'Member Owned',
         description:
-          'Some credit unions return profits to members as dividends, reduced fees, higher savings rates, or lower loan rates. Profits are also frequently donated or invested into local community initiatives.',
+          'At credit unions, you’re a member/shareholder, not just a customer. This means you get a say in how the institution is run, which makes credit unions a more ethical alternative.',
       },
       {
-        title: 'Member Ownership',
+        title: 'Comparable Services',
         description:
-          'At credit unions, you’re a member/shareholder, not just a customer. This means you get a say in how the institution is run, including an equal vote (regardless of your account or investment sizes) to elect the board of directors.',
+          'Credit unions offer many of the same products and services as big banks! Your money is protected and government-insured, just like at a bank.',
       },
     ]}
   >
@@ -106,12 +106,121 @@ const metadata = {
     </Fragment>
   </Features2>
 
+  <Accordions
+    title="Find a Credit Union Near You!"
+    subtitle="These are just a few of the larger credit unions in each province. All the CUs on this list offer in-person branches, ATM networks, credit cards, mobile banking, e-transfers, and US dollar accounts."
+    items={[
+      {
+        title: 'Alberta',
+        banks: [
+          { name: 'Servus Credit Union', url: '', desc: '' },
+          { name: 'Connect First Credit Union', url: '', desc: '' },
+          { name: 'Vision Credit Union', url: '', desc: '' },
+        ],
+      },
+      {
+        title: 'British Columbia',
+        banks: [
+          { name: 'Vancity Credit Union', url: '', desc: '' },
+          { name: 'Coast Capital', url: '', desc: '' },
+          { name: 'Blueshore', url: '', desc: '' },
+        ],
+      },
+      {
+        title: 'Manitoba',
+        banks: [
+          { name: 'Assiniboine', url: '', desc: '' },
+          { name: 'Me-Dian Credit Union', url: '', desc: '' },
+          { name: 'Access Credit Union', url: '', desc: '' },
+        ],
+      },
+      {
+        title: 'Ontario',
+        description: '',
+        banks: [
+          {
+            name: 'Alterna Savings Credit Union',
+            url: 'https://www.alterna.ca/en/personal',
+            desc: '',
+          },
+          {
+            name: 'Duca Financial',
+            url: 'https://www.duca.com/',
+            desc: '',
+          },
+          {
+            name: 'Meridian Credit Union',
+            url: 'https://www.meridiancu.ca/personal',
+            desc: '',
+          },
+          {
+            name: 'Kindred Credit Union',
+            url: 'https://www.kindredcu.com/',
+            desc: '',
+          },
+        ],
+      },
+      {
+        title: 'Quebec',
+        banks: [
+          { name: 'Desjardins', url: '', desc: '' },
+          { name: 'Caisse D’Economie Solidaire Desjardins', url: '', desc: '' },
+          { name: 'Laurentian', url: '', desc: '' },
+        ],
+      },
+      {
+        title: 'Saskatchewan',
+        banks: [
+          { name: 'Conexus Credit Union', url: '', desc: '' },
+          { name: 'Affinity Credit Union', url: '', desc: '' },
+          { name: 'Innovation Credit Union', url: '', desc: '' },
+        ],
+      },
+      {
+        title: 'New Brunswick, Nova Scotia, Newfoundland, Prince Edward Island',
+        banks: [
+          { name: 'Brunswick Credit Union (NB)', url: '', desc: '' },
+          { name: 'East Coast Credit Union (NS)', url: '', desc: '' },
+          { name: 'Newfoundland Credit Union', url: '', desc: '' },
+        ],
+      },
+    ]}
+  />
+
+  <Steps
+    title="What happens next?"
+    classes={{ container: 'md:pt-10 lg:pt-10 lg:px-10 bg-white md:pb-0 lg:pb-0', title: 'text-left md:text-center' }}
+    subtitle="Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make the switch and start enjoying the benefits of a credit union."
+    items={[
+      {
+        title: 'Choose a Credit Union',
+        description:
+          'Look into some different credit unions in your area to find one that best suits your needs. Look for competitive interest rates, low fees, and convenient branch locations.',
+      },
+      {
+        title: 'Open an Account',
+        description:
+          'Go to your new credit union’s website or visit an in-person branch to open an account. Fill out the necessary forms and provide any required documentation, such as personal ID.',
+      },
+      {
+        title: 'Set up Mobile Banking and Transfer Funds',
+        description:
+          'Go online or download a mobile app to set up your online banking account. You can transfer your funds from your bank account to your new credit union account online, or by visiting your branch.',
+      },
+      {
+        title: 'Redirect Payments',
+        description:
+          'Make a list of all your recurring payments and deposits, and redirect them from your bank account to your new credit union account.',
+      },
+    ]}
+  />
+
   <Pledge
     id="pledge"
     isDark
-    title="Take the Challenge"
+    title="Join the Challenge"
     classes={{ container: 'text-left md:text-center m-auto  ', title: 'my-auto text-3xl' }}
-    subtitle="This is a long journey and we are here to help. Sign up as a commitment to make the switch, and we will help you along the way with a few emails providing more information."
+    subtitle="Ready to Break Up With Your Bank? Join the movement by signing up for our 90-Day Break Up Challenge!"
     button="Make the Switch"
     inputs={[
       {
@@ -124,78 +233,26 @@ const metadata = {
         name: 'email',
         label: 'Email',
       },
-      {
-        label: 'Province',
-        name: 'province',
-        type: 'select',
-        options: [
-          { value: 'AB', label: 'Alberta' },
-          { value: 'BC', label: 'British Columbia' },
-          { value: 'MB', label: 'Manitoba' },
-          { value: 'NB', label: 'New Brunswick' },
-          { value: 'NL', label: 'Newfoundland and Labrador' },
-          { value: 'NT', label: 'Northwest Territories' },
-          { value: 'NS', label: 'Nova Scotia' },
-          { value: 'NU', label: 'Nunavut' },
-          { value: 'ON', label: 'Ontario' },
-          { value: 'PE', label: 'Prince Edward Island' },
-          { value: 'QC', label: 'Quebec' },
-          { value: 'SK', label: 'Saskatchewan' },
-          { value: 'YT', label: 'Yukon' },
-          { value: 'other', label: 'Other' },
-        ],
-      },
-      {
-        label: 'Which bank are you breaking up with?',
-        name: 'bank',
-        type: 'select',
-        options: [
-          { value: 'scotiabank', label: 'Scotiabank (Tangerine)' },
-          { value: 'bmo_hsbc', label: 'BMO/HSBC' },
-          { value: 'cibc_simplii', label: 'CIBC (Simplii)' },
-          { value: 'td_canada_trust', label: 'TD Canada Trust' },
-          { value: 'rbc', label: 'RBC' },
-          { value: 'other', label: 'Other' },
-        ],
-      },
     ]}
     disclaimer={{
       label:
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
   >
+    <Fragment slot="body">
+      <p class="mt-2 text-muted">
+        We know that dealing with your finances can be overwhelming. We’re here to help! Over the next 90 days, we will
+        guide you through a step-by-step process to help you break up with your bank and start a new relationship with
+        your credit union! From choosing a credit union, to switching your chequing, savings and credit card accounts,
+        we’ve got you covered. Sign up for the challenge today!
+      </p>
+    </Fragment>
+
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-[#302F2F] font-white dark:bg-transparent"></div>
     </Fragment>
   </Pledge>
 
-  <Steps
-    title="What happens next?"
-    classes={{ container: 'md:pt-10 lg:pt-10 lg:px-10 bg-white md:pb-0 lg:pb-0', title: 'text-left md:text-center' }}
-    subtitle="Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make the switch and start enjoying the benefits of a credit union."
-    items={[
-      {
-        title: 'Find a Credit Union',
-        description:
-          'Research and find a credit union that suits your needs. Look for credit unions that offer competitive interest rates, low fees, and convenient branch locations.',
-      },
-      {
-        title: 'Open an Account',
-        description:
-          'Once you have chosen a credit union, visit their website or branch to open an account. Fill out the necessary forms and provide any required documentation, such as identification.',
-      },
-      {
-        title: 'Transfer Funds',
-        description:
-          'To transfer your funds from your bank account to your new credit union account, you can use online banking or visit your bank in person.',
-      },
-      {
-        title: 'Move Auto Payments',
-        description:
-          'Once you have successfully transferred all your funds and updated your payment details, visit your bank in person or follow their online instructions to close your account.',
-      },
-    ]}
-  />
   <!-- FAQs Widget ******************* -->
 
   <FAQs

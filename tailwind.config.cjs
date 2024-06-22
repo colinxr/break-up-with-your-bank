@@ -18,6 +18,7 @@ module.exports = {
         red: '#FFF3F0',
         grey: '#F8F8F8',
         green: '#038853',
+        darkGreen: '#013621',
       },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],

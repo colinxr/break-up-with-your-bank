@@ -5,6 +5,7 @@ import Logo from '~/assets/images/break-up-with-your-bank-logo.svg';
 
 const {
   description = await Astro.slots.render('description'),
+  body = await Astro.slots.render('body'),
   actions = await Astro.slots.render('actions'),
   image = await Astro.slots.render('image'),
   id,
@@ -25,6 +26,7 @@ const {
 
     <Fragment slot="subtitle">
       <p class="text-black opacity-50 mb-2 text-2xl text-center md:text-left">{description}</p>
+      <p class="text-black opacity-50">{body}</p>
     </Fragment>
 
     <div slot="actions" class="flex max-w-sm gap-4 mt-4">

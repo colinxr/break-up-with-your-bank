@@ -142,6 +142,12 @@ export interface Item {
   callToAction?: CallToAction;
   ctaUrl?: string;
   image?: Image;
+  banks?: Array<{
+    name: string;
+    url: string;
+    desc?: string;
+  }
+  >;
 }
 
 export interface Price {
