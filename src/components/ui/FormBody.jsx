@@ -22,6 +22,7 @@ const FormBody = ({ inputs, disclaimer }) => {
                 type={type}
                 name={name}
                 id={name}
+                required
                 autoComplete={autocomplete}
                 placeholder={label}
                 className="py-3 px-4 block w-full text-black text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white"
