@@ -54,7 +54,7 @@ const {
               <div class="aboslute bg-black md:hidden ml-5 h-full" style={{ width: '2px' }} />
             </div>
 
-            <div class=`ml-4 md:ml-0 mt-2 ${index === items.length - 1 ? 'bg-green text-white rounded-lg p-5 md:pb-4' : 'p-3 md:pb-0'}`>
+            <div class=`ml-4 md:ml-0 md:mt-2 ${index === items.length - 1 ? 'bg-green text-white rounded-lg p-5 md:pb-4' : 'p-3 md:pb-0'}`>
               {title && <p class={twMerge(`text-3xl font-bold`, titleClass, itemClasses?.title)} set:html={title} />}
               {description && (
                 <p
