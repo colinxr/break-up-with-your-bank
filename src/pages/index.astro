@@ -11,6 +11,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Pledge from '~/components/widgets/Contact.astro';
+import ImageBlock from '~/components/widgets/ImageBlock.astro';
 
 const metadata = {
   title: 'Break Up With Your Bank',
@@ -253,7 +254,10 @@ const metadata = {
     </Fragment>
   </Pledge>
 
-  <!-- FAQs Widget ******************* -->
+  <ImageBlock image={{
+    src: '~/assets/images/hero.png',
+    alt: 'Break Up With Your Bank',
+    }}/>
 
   <FAQs
     title="FAQs"

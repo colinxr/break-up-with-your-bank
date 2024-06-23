@@ -1,0 +1,9 @@
+---
+import Image from '~/components/common/Image.astro';
+
+const { image = await Astro.slots.render('image'), } = Astro.props;
+---
+
+<div class="w-screen max-h-[728px] overflow-hidden">
+  <Image class="w-full h-full object-cover max-w-none" style="max-width: unset;" loading="lazy" {...image} />
+</div>
