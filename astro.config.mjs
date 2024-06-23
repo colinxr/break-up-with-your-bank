@@ -14,6 +14,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const hasExternalScripts = false;
 const whenExternalScripts = (items = []) => hasExternalScripts ? Array.isArray(items) ? items.map(item => item()) : [items()] : [];
 
+
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
@@ -41,7 +42,7 @@ export default defineConfig({
     Logger: 1
   }), astrowind({
     config: './src/config.yaml'
-  }), react()],
+  }), react(), partytown()],
   image: {
     service: squooshImageService(),
     domains: ['cdn.pixabay.com']
