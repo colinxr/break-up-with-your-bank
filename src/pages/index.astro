@@ -190,7 +190,7 @@ const metadata = {
 
   <Steps
     title="What happens next?"
-    classes={{ container: 'md:pt-10 lg:pt-10 lg:px-10 bg-white md:pb-0 lg:pb-0', title: 'text-left md:text-center' }}
+    classes={{ container: 'md:pt-10 lg:pt-10 lg:px-10 md:pb-0 lg:pb-0', title: 'text-left md:text-center' }}
     subtitle="Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make the switch and start enjoying the benefits of a credit union."
     items={[
       {
@@ -213,8 +213,13 @@ const metadata = {
         description:
           'Make a list of all your recurring payments and deposits, and redirect them from your bank account to your new credit union account.',
       },
-    ]}
-  />
+    ]}>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-grey font-white dark:bg-transparent"></div>
+  </Fragment>
+</Steps>
+
 
   <Pledge
     id="pledge"
