@@ -54,11 +54,11 @@ const {
               <div class="aboslute bg-black md:hidden ml-5 h-full" style={{ width: '2px' }} />
             </div>
 
-            <div class=`ml-4 md:ml-0 mb-4 md:mt-2 ${index === items.length - 1 ? 'bg-green text-white rounded-lg p-5 md:pb-4' : ''}`>
+            <div class="ml-4 md:ml-0 mb-4 md:mt-2">
               {title && <p class={twMerge(`text-2xl md:text-3xl font-bold`, titleClass, itemClasses?.title)} set:html={title} />}
               {description && (
                 <p
-                  class={twMerge(`${index === items.length - 1 ? 'text-white' : 'text-muted'} mt-2`, descriptionClass, itemClasses?.description)}
+                  class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)}
                   set:html={description}
                 />
               )}

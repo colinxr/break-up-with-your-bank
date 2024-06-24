@@ -7,7 +7,7 @@ const { inputs, disclaimer, button = 'Contact us', description = '' } = Astro.pr
 ---
 
 <form id="pledge-form">
-  <div class="flex flex-wrap gap-6">
+  <div class="flex flex-wrap gap-2">
     <FormBody inputs={inputs} disclaimer={disclaimer} client:visible />
   </div>
 
@@ -19,7 +19,7 @@ const { inputs, disclaimer, button = 'Contact us', description = '' } = Astro.pr
             {button}
           </Button>
         </div>
-        <div class="form-message" />
+        <div class="form-message text-white" />
       </>
     )
   }

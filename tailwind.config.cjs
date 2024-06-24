@@ -19,6 +19,8 @@ module.exports = {
         grey: '#F8F8F8',
         green: '#038853',
         darkGreen: '#013621',
+        hoverGreen: '#4eab86',
+        activeGreen: '#026c42',
       },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],

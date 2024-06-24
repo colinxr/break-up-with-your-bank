@@ -23,7 +23,7 @@ const metadata = {
   <LandingHero
     title="Break Up With Your Bank"
     description="Your bank is funding war."
-    body="All [Canadian] big banks invest heavily in weapons, military surveillance, and fossil fuel industries- fueling war, occupation, and climate disasters around the world. All with YOUR money. But you can do something about it."
+    body="Canadian big banks invest heavily in weapons, military surveillance, and fossil fuel industries- fueling war, occupation, and climate disasters around the world. <br/><br/> All with <strong>YOUR</strong> money. But you can do something about it."
     actions="Switch Now"
     image={{
       src: '~/assets/images/hero.png',
@@ -41,30 +41,30 @@ const metadata = {
         title: 'Investing in War',
         description:
           'Banks invest billions of dollars in nuclear weaponry, and fund companies like Elbit Systems, which supplies the bombs that are currently being used to kill children in Gaza',
-        callToAction: { href: '#', text: 'Learn More' },
+        callToAction: { href: '#', text: 'Scotiabank alone invests $500M in Israeli arms firm →' },
       },
       {
         title: 'Fuelling Climate Disaster',
         description:
           'The big 5 Canadian banks are 5 of the 6 largest global financiers of tar sands. RBC alone is the largest financier of fossil fuels worldwide.',
-        callToAction: { href: '#', text: 'Learn More' },
+        callToAction: { href: '#', text: 'Canadian big 5 are among the top 20 fossil fuel financiers in the world →' },
       },
       {
         title: 'Financing Occupation',
         description:
           'Canadian banks invest in over 112 companies listed by the UN as being complicit in Israel’s occupation.',
-        callToAction: { href: '#', text: 'Learn More' },
+        callToAction: { href: '#', text: 'Canadian banks part of Bank Track\'s Illegal Israeli Settlemen financiers →' },
       },
       {
         title: 'Attacking Indigenous Communities',
         description:
           'Banks continuously fund projects that violate Indigenous peoples’ rights at places like Standing Rock, Wet’suwet’en Yintah, and along the Transmountain Expansion.',
-        callToAction: { href: '#', text: 'Learn More' },
+        callToAction: { href: '#', text: 'RBC is the primary financier of pipelines without consent from indigenous leaders →' },
       },
     ]}
     image={{
       src: '~/assets/images/break-up-with-your-bank-gaza.svg',
-      alt: 'Colorful Image',
+      alt: '',
     }}
   >
     <Fragment slot="bg">
@@ -98,7 +98,7 @@ const metadata = {
   >
     <Fragment slot="action">
       <div class="mt-8 text-right">
-        <a href="#" class="cursor-pointer hover:text-primary underline mb-6 mt-8">Learn more about credit unions</a>
+        <a href="#" class="cursor-pointer  text-sm text-green hover:text-darkGreen underline mb-6 mt-8">Learn more about credit unions</a>
       </div>
     </Fragment>
 
@@ -221,7 +221,6 @@ const metadata = {
     isDark
     title="Join the Challenge"
     classes={{ container: 'text-left md:text-center m-auto  ', title: 'my-auto text-3xl' }}
-    subtitle="Ready to Break Up With Your Bank? Join the movement by signing up for our 90-Day Break Up Challenge!"
     button="Make the Switch"
     inputs={[
       {
@@ -240,13 +239,16 @@ const metadata = {
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
     }}
   >
-    <Fragment slot="body">
-      <p class="mt-2 text-muted">
-        We know that dealing with your finances can be overwhelming. We’re here to help! Over the next 90 days, we will
-        guide you through a step-by-step process to help you break up with your bank and start a new relationship with
-        your credit union! From choosing a credit union, to switching your chequing, savings and credit card accounts,
-        we’ve got you covered. Sign up for the challenge today!
-      </p>
+    <Fragment slot="body" class="mt-2 text-muted md:max-w-3xl">
+      <div class="mx-auto text-white md:max-w-3xl">
+        <p>Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make the switch and start enjoying the benefits of a credit union.</p>
+        <p class="mt-4">
+          We know that dealing with your finances can be overwhelming. We’re here to help! Over the next 90 days, we will
+          guide you through a step-by-step process to help you break up with your bank and start a new relationship with
+          your credit union! From choosing a credit union, to switching your chequing, savings and credit card accounts,
+          we’ve got you covered. Sign up for the challenge today!
+        </p>
+      </div>
     </Fragment>
 
     <Fragment slot="bg">
@@ -255,7 +257,7 @@ const metadata = {
   </Pledge>
 
   <ImageBlock image={{
-    src: '~/assets/images/hero.png',
+    src: '~/assets/images/imageblock.jpg',
     alt: 'Break Up With Your Bank',
     }}/>
 
