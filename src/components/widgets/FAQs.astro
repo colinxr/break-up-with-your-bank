@@ -19,18 +19,9 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
-  <!-- <ItemGrid
-    items={items}
-    columns={columns}
-    defaultIcon='tabler:chevron-right'
-    classes={{
-      container: `gap-y-8 md:gap-y-12`,
-      panel: 'max-w-none',
-      icon: 'flex-shrink-0 mt-1 w-6 h-6 text-primary',
-    }}
-  /> -->
+
   {
-    items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }, i) => (
+    items.map(({ title, description, classes: itemClasses = {} }, i) => (
       <details open={i === 0} class={`group transition duration-50 mb-2 rounded-[20px] border-2 border-[#F8F8F8]`}>
         <summary class="flex cursor-pointer items-center justify-between gap-2  transition text-black   bg-[#F8F8F8] p-5 rounded-[20px]  group-open:rounded-bl-[0px] group-open:rounded-br-[0px] ">
           <h4 class="text-2xl font-black ">{title}</h4>
@@ -65,11 +56,16 @@ const {
             </svg>
           </div>
         </summary>
-        <div class="p-5 font-normal	text-lg">
-          <Fragment slot="subtitle">{description}</Fragment>
+        <div class="faq-body p-5 font-normal	text-lg">
+          <Fragment slot="subtitle" set:html={description}></Fragment>
         </div>
       </details>
     ))
   }
 </WidgetWrapper>
 
+<style>
+  p + p {
+    margin-top: 10px;
+  }
+</style>

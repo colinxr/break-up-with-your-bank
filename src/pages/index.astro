@@ -12,6 +12,7 @@ import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Pledge from '~/components/widgets/Contact.astro';
 import ImageBlock from '~/components/widgets/ImageBlock.astro';
+import faqContent from '~/faqs.js'
 
 const metadata = {
   title: 'Break Up With Your Bank',
@@ -267,32 +268,6 @@ const metadata = {
   <FAQs
     title="FAQs"
     classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why should I switch from a bank to a credit union?',
-        description:
-          'There are several reasons why switching from a bank to a credit union can be beneficial. Credit unions are member-owned, not-for-profit financial institutions that prioritize the needs of their members. They often offer lower fees, higher interest rates on savings accounts, and lower interest rates on loans. Additionally, credit unions are known for their personalized service and community-focused approach.',
-      },
-      {
-        title: 'How do I switch from a bank to a credit union?',
-        description:
-          'Switching from a bank to a credit union is a relatively simple process. First, research and find a credit union that suits your needs. Then, open an account with the credit union and transfer your funds from your bank account to your new credit union account. You may also need to update any automatic payments or direct deposits to your new account. Finally, close your bank account once all your transactions have been successfully transferred.',
-      },
-      {
-        title: 'Will I still have access to ATMs if I switch to a credit union?',
-        description:
-          "Yes, most credit unions are part of a network that allows their members to access a large number of ATMs nationwide. Additionally, many credit unions reimburse a certain amount of ATM fees incurred by their members each month. It's always a good idea to check with the credit union you are considering to see what ATM options and fee reimbursements they offer.",
-      },
-      {
-        title: 'Are credit unions insured?',
-        description:
-          'Yes, most credit unions are insured by the National Credit Union Administration (NCUA), which is a federal agency. The NCUA provides insurance coverage of up to $250,000 per depositor, similar to the Federal Deposit Insurance Corporation (FDIC) coverage provided to banks. This means that your deposits in a credit union are protected and safe.',
-      },
-      {
-        title: 'What if I have a loan or a mortage with my bank?',
-        description:
-          'If you have a loan or mortgage with your bank and you decide to switch to a credit union, you will need to transfer that loan or mortgage to the credit union. Credit unions often offer competitive rates on loans and mortgages, so it may be beneficial to explore this option. Contact your credit union of choice to discuss the process of transferring your loan or mortgage.',
-      },
-    ]}
+    items={faqContent}
   />
 </Layout>
