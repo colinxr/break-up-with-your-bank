@@ -66,6 +66,7 @@ const FormBody = ({ inputs, disclaimer }) => {
               name="disclaimer"
               type="checkbox"
               className="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white"
+              required
             />
           </div>
           <div className="ml-3">

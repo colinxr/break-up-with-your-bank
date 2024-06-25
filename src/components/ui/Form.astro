@@ -2,6 +2,9 @@
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
 import FormBody from './FormBody.jsx';
+import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path.js';
+
+setBasePath('dist/assets');
 
 const { inputs, disclaimer, button = 'Contact us', description = '' } = Astro.props;
 ---
@@ -33,8 +36,19 @@ const { inputs, disclaimer, button = 'Contact us', description = '' } = Astro.pr
   }
 </form>
 
+<sl-dialog class="text-black text-left" open label="Success!">
+  <p>Thanks for signing up. We will be in touch soon!</p>
+  <button slot="secondary-action" type="button">Close</button>
+</sl-dialog>
+
+
 <script>
+    import("@shoelace-style/shoelace/dist/themes/light.css");
+    import("@shoelace-style/shoelace/dist/components/dialog/dialog.js");
+
   const $form = document.getElementById('pledge-form');
+  const $dialog = document.querySelector('sl-dialog'); // Ensure this selector matches your dialog
+
   if ($form) {
     $form.addEventListener('submit', async function (event) {
       if (!event || !event.target) return null;
@@ -68,6 +82,13 @@ const { inputs, disclaimer, button = 'Contact us', description = '' } = Astro.pr
 
         const result = await response.json();
         console.log('Success:', result);
+
+        
+        if ($dialog) {
+          $dialog.show();
+          $dialog.setAttribute('open', '');
+        }
+
         if (messageElement) {
           messageElement.textContent = `Success! you've been added to the list.`;
         }
