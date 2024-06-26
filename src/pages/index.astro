@@ -12,7 +12,7 @@ import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Pledge from '~/components/widgets/Contact.astro';
 import ImageBlock from '~/components/widgets/ImageBlock.astro';
-import faqContent from '~/faqs.js'
+import faqContent from '~/faqs.js';
 
 const metadata = {
   title: 'Break Up With Your Bank',
@@ -27,7 +27,7 @@ const metadata = {
     body="Canadian big banks invest heavily in weapons, military surveillance, and fossil fuel industries- fueling war, occupation, and climate disasters around the world. <br/><br/> All with <strong>YOUR</strong> money. But you can do something about it."
     actions="Switch Now"
     image={{
-      src: '~/assets/images/hero.png',
+      src: '~/assets/images/hero.jpg',
       alt: 'Breakup With Banks',
     }}
   />
@@ -40,25 +40,37 @@ const metadata = {
         title: 'Investing in War',
         description:
           'Banks invest billions of dollars in nuclear weaponry, and fund companies like Elbit Systems, which supplies the bombs that are currently being used to kill children in Gaza',
-        callToAction: { href: 'https://theintercept.com/2023/04/06/israel-arms-scotiabank-elbit-david-fingold/', text: 'Scotiabank alone invests $500M in Israeli arms firm →' },
+        callToAction: {
+          href: 'https://theintercept.com/2023/04/06/israel-arms-scotiabank-elbit-david-fingold/',
+          text: 'Scotiabank alone invests $500M in Israeli arms firm →',
+        },
       },
       {
         title: 'Fuelling Climate Disaster',
         description:
           'The big 5 Canadian banks are 5 of the 6 largest global financiers of tar sands. RBC alone is the largest financier of fossil fuels worldwide.',
-        callToAction: { href: 'https://www.aljazeera.com/news/2023/4/13/canadian-bank-named-worlds-largest-fossil-fuel-financier', text: 'Canadian big 5 are among the top 20 fossil fuel financiers in the world →' },
+        callToAction: {
+          href: 'https://www.aljazeera.com/news/2023/4/13/canadian-bank-named-worlds-largest-fossil-fuel-financier',
+          text: 'Canadian big 5 are among the top 20 fossil fuel financiers in the world →',
+        },
       },
       {
         title: 'Financing Occupation',
         description:
           'Canadian banks invest in over 112 companies listed by the UN as being complicit in Israel’s occupation.',
-        callToAction: { href: 'https://www.banktrack.org/project/illegal_israeli_settlements', text: 'Canadian banks part of Bank Track\'s Illegal Israeli Settlemen financiers →' },
+        callToAction: {
+          href: 'https://www.banktrack.org/project/illegal_israeli_settlements',
+          text: "Canadian banks part of Bank Track's Illegal Israeli Settlemen financiers →",
+        },
       },
       {
         title: 'Attacking Indigenous Communities',
         description:
           'Banks continuously fund projects that violate Indigenous peoples’ rights at places like Standing Rock, Wet’suwet’en Yintah, and along the Transmountain Expansion.',
-        callToAction: { href: 'https://www.aljazeera.com/news/2023/4/13/canadian-bank-named-worlds-largest-fossil-fuel-financier', text: 'RBC is the primary financier of pipelines without consent from indigenous leaders →' },
+        callToAction: {
+          href: 'https://www.aljazeera.com/news/2023/4/13/canadian-bank-named-worlds-largest-fossil-fuel-financier',
+          text: 'RBC is the primary financier of pipelines without consent from indigenous leaders →',
+        },
       },
     ]}
     image={{
@@ -97,7 +109,9 @@ const metadata = {
   >
     <Fragment slot="action">
       <div class="mt-8 text-right">
-        <a href="#" class="cursor-pointer  text-sm text-green hover:text-darkGreen underline mb-6 mt-8">Learn more about credit unions</a>
+        <a href="#" class="cursor-pointer text-sm text-green hover:text-darkGreen underline mb-6 mt-8"
+          >Learn more about credit unions</a
+        >
       </div>
     </Fragment>
 
@@ -212,13 +226,12 @@ const metadata = {
         description:
           'Make a list of all your recurring payments and deposits, and redirect them from your bank account to your new credit union account.',
       },
-    ]}>
-
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-grey font-white dark:bg-transparent"></div>
-  </Fragment>
-</Steps>
-
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-grey font-white dark:bg-transparent"></div>
+    </Fragment>
+  </Steps>
 
   <Pledge
     id="pledge"
@@ -245,12 +258,15 @@ const metadata = {
   >
     <Fragment slot="body" class="mt-2 text-muted md:max-w-3xl">
       <div class="mx-auto text-white md:max-w-3xl">
-        <p>Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make the switch and start enjoying the benefits of a credit union.</p>
+        <p>
+          Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make
+          the switch and start enjoying the benefits of a credit union.
+        </p>
         <p class="mt-4">
-          We know that dealing with your finances can be overwhelming. We’re here to help! Over the next 90 days, we will
-          guide you through a step-by-step process to help you break up with your bank and start a new relationship with
-          your credit union! From choosing a credit union, to switching your chequing, savings and credit card accounts,
-          we’ve got you covered. Sign up for the challenge today!
+          We know that dealing with your finances can be overwhelming. We’re here to help! Over the next 90 days, we
+          will guide you through a step-by-step process to help you break up with your bank and start a new relationship
+          with your credit union! From choosing a credit union, to switching your chequing, savings and credit card
+          accounts, we’ve got you covered. Sign up for the challenge today!
         </p>
       </div>
     </Fragment>
@@ -260,14 +276,12 @@ const metadata = {
     </Fragment>
   </Pledge>
 
-  <ImageBlock image={{
-    src: '~/assets/images/imageblock.jpg',
-    alt: 'Break Up With Your Bank',
-    }}/>
-
-  <FAQs
-    title="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={faqContent}
+  <ImageBlock
+    image={{
+      src: '~/assets/images/imageblock.jpg',
+      alt: 'Break Up With Your Bank',
+    }}
   />
+
+  <FAQs title="FAQs" classes={{ container: 'max-w-6xl' }} items={faqContent} />
 </Layout>
