@@ -1,6 +1,6 @@
 export default [ 
       {
-        title: 'What is a a credit union?',
+        title: 'What is a credit union?',
         description:
           '<p>Credit unions (or caisse populaires as they are called in Quebec) are member-owned,  cooperative financial institutions. This means they’re owned and controlled by the people who use them, offering pathways for accountability unavailable at banks. Some credit unions return profits to members as dividends, reduced fees, higher savings rates, or lower loan rates. Profits are also frequently donated or invested into local community initiatives.</p><p class="mt-3">At credit unions, you’re a member/shareholder, not just a customer. This means you get a say in some aspects of how the institution is run, including an equal vote (regardless of your account or investment sizes) to elect the board of directors. This democratic process and the explicit community focus of credit unions generally make them a more ethical alternative, while offering many of the same products and services (personal and business) as big banks.',
       },
