@@ -1,6 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { defineConfig } from 'astro/config';
+import { defineConfig, squooshImageService } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
@@ -43,6 +43,10 @@ export default defineConfig({
   }), astrowind({
     config: './src/config.yaml'
   }), react(), partytown()],
+  image: {
+    service: squooshImageService(),
+    domains: ['cdn.pixabay.com']
+  },
   markdown: {
     remarkPlugins: [readingTimeRemarkPlugin],
     rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin]
