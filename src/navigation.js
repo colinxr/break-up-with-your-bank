@@ -166,6 +166,7 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
+    { text: 'About Us', href: getPermalink('/about-us') },
     { text: 'Land Acknowledgement', href: getPermalink('/land-acknowledgement') },
   ],
   socialLinks: [
