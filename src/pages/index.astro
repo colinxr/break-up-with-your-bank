@@ -24,12 +24,8 @@ const metadata = {
   <LandingHero
     title="Break Up With Your Bank"
     description="Your bank is funding war."
-    body="Canadian big banks invest heavily in weapons, military surveillance, and fossil fuel industries- fueling war, occupation, and climate disasters around the world. <br/><br/> All with <strong>YOUR</strong> money. But you can do something about it."
+    body="Canadian big banks invest heavily in weapons, military surveillance, and fossil fuel industries- fueling war, occupation, and climate disasters around the world. All with <strong>YOUR</strong> money. <br/><br/> But you can do something about it."
     actions="Switch Now"
-    image={{
-      src: '~/assets/images/hero.jpg',
-      alt: 'Breakup With Banks',
-    }}
   />
 
   <Content
@@ -86,33 +82,25 @@ const metadata = {
 
   <Features2
     title="Join a Credit Union"
-    classes={{ title: 'text-left text-white', headline: 'mb-4' }}
+    classes={{ title: 'text-left text-white', headline: 'mb-4 text-center' }}
     subtitle="Credit unions are member-owned, cooperative financial institutions. This means they’re owned and controlled by the people who use them."
     items={[
-      {
-        title: 'Community Minded',
-        description:
-          ' Some credit unions return profits to members as dividends, reduced fees, higher savings rates, or lower loan rates. Profits are also frequently donated or invested into local community initiatives.',
-      },
       {
         title: 'Member Owned',
         description:
           'At credit unions, you’re a member/shareholder, not just a customer. This means you get a say in how the institution is run, which makes credit unions a more ethical alternative.',
       },
       {
+        title: 'Community Minded',
+        description:
+          'Many credit unions return profits to members as dividends, reduced fees, higher savings rates, or lower loan rates. Profits are also frequently donated or invested into local community initiatives.',
+      },
+      {
         title: 'Comparable Services',
         description:
-          'Credit unions offer many of the same products and services as big banks! Your money is protected and government-insured, just like at a bank.',
+          'Credit unions offer the same products and services as big banks! Your money is protected and government-insured, just like at a bank.',
       },
     ]}>
-    <Fragment slot="action">
-      <div class="mt-8 text-right">
-        <a href="#" class="cursor-pointer text-sm text-green hover:text-darkGreen underline mb-6 mt-8"
-          >Learn more about credit unions</a
-        >
-      </div>
-    </Fragment>
-
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-grey font-white dark:bg-transparent"></div>
     </Fragment>
@@ -202,7 +190,7 @@ const metadata = {
   <Steps
     title="What happens next?"
     classes={{ container: 'md:pt-10 lg:pt-10 lg:px-10 md:pb-0 lg:pb-0', title: 'text-left md:text-center' }}
-    subtitle="Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make the switch and start enjoying the benefits of a credit union."
+    subtitle="Your bank uses the money in your CHEQUING and SAVINGS accounts to loan out to clients at a rate of $19x. This means that for every dollar you deposit, the bank can loan $19 to corporations that invest in war and environmental destruction (based on the Canada reserve ratio). The good news is that switching your chequing and savings accounts from a bank to a credit union is easier than you think!"
     items={[
       {
         title: 'Choose a Credit Union',
@@ -255,15 +243,10 @@ const metadata = {
     <Fragment slot="body" class="mt-2 text-muted md:max-w-3xl">
       <div class="mx-auto text-white md:max-w-3xl">
         <p>
-          Switching from a bank account to a credit union is easier than you think. Follow these simple steps to make
-          the switch and start enjoying the benefits of a credit union.
-        </p>
-        <p class="mt-4">
           We know that dealing with your finances can be overwhelming. We’re here to help! Over the next 90 days, we
           will guide you through a step-by-step process to help you break up with your bank and start a new relationship
           with your credit union! From choosing a credit union, to switching your chequing, savings and credit card
-          accounts, we’ve got you covered. Sign up for the challenge today!
-        </p>
+          accounts, we’ve got you covered.</p>
       </div>
     </Fragment>
 
