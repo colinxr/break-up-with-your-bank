@@ -9,3 +9,5 @@ The Break Up With Your Bank campaign was founded in Tkaronto, which is coloniall
 
 It is our responsibility to call out the ongoing occupation and destruction of Indigenous lands and genocidal violence towards Indigenous peoples here, in Palestine, and around the world which the Canadian state, and its banks, are actively promoting, financing and benefiting from. When we start looking at our personal finances, we get a better picture of where we are materially located in systems of oppression—we see how, often without our consent, our finances are tied up in industries and practices that are incredibly violent to humans, non-humans, and this earth we rely on. We encourage you to reflect on whose land you’re on and how your own accountability to those nations can inform the way you show up for divestment and re-investment work.
 
+Visit [native-land.ca](https://native-land.ca) to learn more about the land you live on.
+
