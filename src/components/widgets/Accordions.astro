@@ -19,7 +19,7 @@ const {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
   {
-    items.map(({ title, banks }) => (
+    items.map(({ title, banks, description }) => (
       <details class={`group transition duration-50 mb-2 rounded-[20px] border-2 border-[#F8F8F8]`}>
         <summary class="flex cursor-pointer items-center justify-between gap-2  transition text-black   bg-[#F8F8F8] p-5 rounded-[20px]  group-open:rounded-bl-[0px] group-open:rounded-br-[0px] ">
           <h4 class="text-2xl font-black ">{title}</h4>
@@ -55,9 +55,15 @@ const {
           </div>
         </summary>
         <div class="p-5 font-normal	text-lg">
-          <ul>{banks && banks.map((bank) => <li>{bank.name}</li>)}</ul>
+          <ul>{banks && banks.map((bank) => <li>{bank.name} {bank.desc ? `- ${bank.desc}` : ''}</li>)}</ul>
+          <span class="text-sm mt-6">{description}</span>
         </div>
       </details>
     ))
   }
+
+  <div class="px-8 mt-3">
+    <span class="text-sm mx-auto">*B Corp Certified (Certified B Corporations are ‘businesses that meet the highest standards of verified social and environmental performance, public transparency, and legal accountability to balance profit and purpose.’ bcorpdirectory.ca)</span>
+
+  </div>
 </WidgetWrapper>
