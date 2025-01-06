@@ -68,22 +68,14 @@ const {
           }}
         />
       </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+      <div aria-hidden="true" class="md:mt-0 md:basis-1/2">
         {
           image && (
             <div class="relative m-auto max-w-4xl">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
-                <Image
-                  class="mx-auto w-full"
-                  width={500}
-                  height={700}
-                  widths={[400, 768]}
-                  sizes="(max-width: 768px) 100vw, 432px"
-                  layout="contained"
-                  {...image}
-                />
+                <img class="mx-auto w-full" sizes="(max-width: 768px) 100vw, 432px" src={image?.src} />
               )}
             </div>
           )

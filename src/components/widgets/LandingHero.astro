@@ -2,6 +2,7 @@
 import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
 import Logo from '~/assets/images/break-up-with-your-bank-logo.svg';
+import ChequeBook from '~/assets/images/chequebook.png';
 
 const {
   description = await Astro.slots.render('description'),
@@ -9,27 +10,33 @@ const {
   actions = await Astro.slots.render('actions'),
   id,
 } = Astro.props;
+
+console.log(ChequeBook);
+console.log(Logo);
 ---
 
 <div id={id}>
   <div
-    class="max-w-7xl flex flex-col text-black items-center justify-center text-center mx-auto bg-white pt-8 pb-16 px-8"
+    class="max-w-7xl flex flex-col md:flex-row md:gap-10 text-black items-center justify-center mx-auto bg-white pt-8 pb-16 px-8"
   >
     <Fragment slot="title">
-      <h1 class="md:w-[20%] mb-4">
-        <Image src={Logo} loading="eager" alt="Break Up With Your Bank" class="md:w-1/5" style="max-height: none" />
+      <h1 class="md:w-1/2 mb-4">
+        <img src={Logo.src} loading="eager" alt="Break Up With Your Bank" class="w-1/3 md:w-1/2 mx-auto" />
+        <Image src={ChequeBook} loading="eager" alt="tk" />
       </h1>
     </Fragment>
 
-    <Fragment slot="subtitle">
-      <h2 class="mb-2 text-4xl font-bold">{description}</h2>
-      <p class="max-w-[600px]" set:html={body}></p>
-    </Fragment>
+    <div>
+      <Fragment slot="subtitle">
+        <h2 class="mb-2 text-4xl font-bold">{description}</h2>
+        <p class="max-w-[600px]" set:html={body} />
+      </Fragment>
 
-    <div slot="actions" class="flex max-w-sm gap-4 mt-8">
-      <Button variant="primary" class="bg-green text-white  border-0 rounded" href="#pledge">
-        {actions}
-      </Button>
+      <div slot="actions" class="max-w-sm gap-4 mt-8">
+        <Button variant="primary" class="bg-green text-white border-0 rounded" href="#pledge">
+          {actions}
+        </Button>
+      </div>
     </div>
   </div>
 </div>

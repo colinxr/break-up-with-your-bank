@@ -13,6 +13,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Pledge from '~/components/widgets/Contact.astro';
 import ImageBlock from '~/components/widgets/ImageBlock.astro';
 import faqContent from '~/faqs.js';
+import atm from '~/assets/images/atm.png';
 
 const metadata = {
   title: 'Break Up With Your Bank',
@@ -69,10 +70,8 @@ const metadata = {
         },
       },
     ]}
-    image={{
-      src: '~/assets/images/atm-break-up-with-your-bank.png',
-      alt: '',
-    }}>
+    image={atm}
+  >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-red dark:bg-transparent"></div>
     </Fragment>
@@ -100,7 +99,8 @@ const metadata = {
         description:
           'Credit unions offer the same products and services as big banks! Your money is protected and government-insured, just like at a bank.',
       },
-    ]}>
+    ]}
+  >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-grey font-white dark:bg-transparent"></div>
     </Fragment>
@@ -188,12 +188,16 @@ const metadata = {
         title: 'National',
         description: '*USD accounts not available for all National institutions',
         banks: [
-          { name: 'Outlook Financial', url: '', desc: 'The only Indigenous-led CU in Canada, and they provide an excellent interest rate!' },
+          {
+            name: 'Outlook Financial',
+            url: '',
+            desc: 'The only Indigenous-led CU in Canada, and they provide an excellent interest rate!',
+          },
           { name: 'Alterna Bank', url: '', desc: 'Owned by Alterna Savings. Online only' },
           { name: 'Motusbank', url: '', desc: 'Owned by Meridian CU. Online only' },
           { name: 'Laurentian Bank', url: '', desc: 'In-person branches in Quebec only' },
         ],
-      }
+      },
     ]}
   />
 
@@ -222,7 +226,8 @@ const metadata = {
         description:
           'Make a list of all your recurring payments and deposits, and redirect them from your bank account to your new credit union account.',
       },
-    ]}>
+    ]}
+  >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-grey font-white dark:bg-transparent"></div>
     </Fragment>
@@ -249,14 +254,16 @@ const metadata = {
     disclaimer={{
       label:
         'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}>
+    }}
+  >
     <Fragment slot="body" class="mt-2 text-muted md:max-w-3xl">
       <div class="mx-auto text-white md:max-w-3xl">
         <p>
           We know that dealing with your finances can be overwhelming. We’re here to help! Over the next 10 weeks, we
           will guide you through a step-by-step process to help you break up with your bank and start a new relationship
-          with your credit union! From choosing a credit union, to switching your chequing and savings
-          accounts, we’ve got you covered.</p>
+          with your credit union! From choosing a credit union, to switching your chequing and savings accounts, we’ve
+          got you covered.
+        </p>
       </div>
     </Fragment>
 
@@ -264,13 +271,6 @@ const metadata = {
       <div class="absolute inset-0 bg-[#302F2F] font-white dark:bg-transparent"></div>
     </Fragment>
   </Pledge>
-
-  <ImageBlock
-    image={{
-      src: '~/assets/images/imageblock.jpg',
-      alt: 'Break Up With Your Bank',
-    }}
-  />
 
   <FAQs title="FAQs" classes={{ container: 'max-w-6xl' }} items={faqContent} />
 </Layout>
